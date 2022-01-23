@@ -83,6 +83,84 @@ section {
 	@include titleText(3.5rem);
 }
 
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 10%;
+	background: $white;
+	box-shadow: $box-shadow;
+	display: flex;
+	align-items: center;
+	z-index: 100;
+
+	.logo {
+		margin-right: auto;
+		height: 4.5rem;
+		width: auto;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	.navbar {
+		position: relative;
+
+		a {
+			margin-right: 2rem;
+			@include titleText(2rem);
+
+			&:hover {
+				color: $green;
+			}
+
+			&.btn {
+				background: $green;
+				color: $white;
+
+				border-radius: 5rem;
+				&:hover {
+					background: $light-green;
+					color: $black;
+				}
+			}
+		}
+
+		#close-navbar {
+			position: absolute;
+			top: 1.5rem;
+			right: 2.5rem;
+			font-size: 4rem;
+			cursor: pointer;
+			color: $black;
+			display: none;
+
+			&:hover {
+				transform: rotate(90deg);
+				color: $green;
+			}
+		}
+	}
+
+	.icons div {
+		cursor: pointer;
+		font-size: 2.5rem;
+		color: $black;
+		margin-right: 1.5rem;
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	#menu-btn {
+		display: none;
+	}
+}
+
 // Media queries
 @media (max-width: 1200px) {
 	section {
@@ -101,6 +179,47 @@ section {
 }
 
 @media (max-width: 768px) {
+	.header {
+		#menu-btn {
+			display: inline-block;
+		}
+
+		.navbar {
+			position: fixed;
+			top: 0;
+			right: -105%;
+			width: 30rem;
+			background: $white;
+			height: 100%;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			z-index: 1200;
+
+			#close-navbar {
+				display: block;
+			}
+
+			&.active {
+				box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+				right: 0;
+			}
+
+			a {
+				display: block;
+				margin: 1rem 0;
+				text-align: center;
+				font-size: 3rem;
+
+				&.btn {
+					width: 75%;
+					margin: 1rem auto;
+
+					border-radius: 5rem;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 450px) {
