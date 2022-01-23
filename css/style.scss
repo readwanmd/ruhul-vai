@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	list-style: none;
+	transition: all 0.2s linear;
+}
+
+$green: #0eb582;
+$light-green: #f0fdfa;
+$light-color: #777;
+$light-white: #eee;
+$white: #fff;
+$black: #444;
+$border: 0.1rem solid $green;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+@mixin grid($val) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+	gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+	font-size: $titleSize;
+	text-transform: capitalize;
+	color: $black;
+}
+
+@mixin graphText($graphSize) {
+	font-size: $graphSize;
+	line-height: 2;
+	color: $light-color;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+
+	&::-webkit-scrollbar {
+		width: 0.8rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $green;
+	}
+}
+
+section {
+	padding: 5rem 10%;
+}
+
+.btn {
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	font-size: 1.8rem;
+	border: $border;
+	background: $light-green;
+	color: $green;
+	text-transform: capitalize;
+	cursor: pointer;
+
+	&:hover {
+		background: $green;
+		color: $white;
+	}
+}
+
+.heading {
+	text-align: center;
+	margin-bottom: 3rem;
+	@include titleText(3.5rem);
+}
+
+// Media queries
+@media (max-width: 1200px) {
+	section {
+		padding: 3rem 5%;
+	}
+}
+
+@media (max-width: 991px) {
+	html {
+		font-size: 55%;
+	}
+
+	section {
+		padding: 5rem 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 450px) {
+	html {
+		font-size: 50%;
+	}
+
+	.heading {
+		font-size: 3rem;
+	}
+}
