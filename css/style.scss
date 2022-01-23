@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 * {
 	margin: 0;
@@ -82,14 +83,14 @@ section {
 	margin-bottom: 3rem;
 	@include titleText(3.5rem);
 }
-
+//-----  Navbar Start -----
 .header {
 	position: sticky;
 	top: 0;
 	left: 0;
 	right: 0;
 	padding: 1rem 10%;
-	background: $white;
+	background: $light-green;
 	box-shadow: $box-shadow;
 	display: flex;
 	align-items: center;
@@ -161,6 +162,88 @@ section {
 	}
 }
 
+//-----  Navbar End -----
+
+//----- Hero section start -----
+.hero {
+	min-height: 100vh;
+	// background: linear-gradient(0deg, rgba(3, 3, 3, 0.623), rgba(0, 0, 0, 0.63)),
+	background: url(../asset/hero-img.jpg);
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.content {
+		backdrop-filter: blur(8px);
+		background: rgba(0, 0, 0, 0.5);
+		padding: 13rem 2rem;
+		color: $white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.title {
+			@include titleText(6rem);
+			text-align: center;
+			color: $white;
+
+			span {
+				color: $green;
+				font-family: 'Shadows Into Light', cursive;
+			}
+		}
+
+		p {
+			@include graphText(2rem);
+			text-align: center;
+			color: $white;
+			margin-bottom: 2rem;
+		}
+
+		.count-down {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+
+			.box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 10rem;
+				width: 18rem;
+				background: #63e4c68f;
+				border: $border;
+				border-radius: 3px;
+
+				h3 {
+					@include titleText(5rem);
+
+					color: $white;
+				}
+				span {
+					@include titleText(2rem);
+					margin-top: 1.2rem;
+
+					color: $white;
+				}
+			}
+		}
+
+		.btn {
+			margin-top: 2rem;
+		}
+	}
+}
+
+//-----  Hero section End -----
+
 // Media queries
 @media (max-width: 1200px) {
 	section {
@@ -220,6 +303,12 @@ section {
 			}
 		}
 	}
+
+	.hero {
+		.content {
+			padding: 10rem 2rem;
+		}
+	}
 }
 
 @media (max-width: 450px) {
@@ -229,5 +318,11 @@ section {
 
 	.heading {
 		font-size: 3rem;
+	}
+
+	.hero {
+		.content {
+			padding: 3rem 2rem;
+		}
 	}
 }

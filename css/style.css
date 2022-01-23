@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -66,7 +67,7 @@ section {
   left: 0;
   right: 0;
   padding: 1rem 10%;
-  background: #fff;
+  background: #f0fdfa;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   display: -webkit-box;
@@ -146,6 +147,117 @@ section {
   display: none;
 }
 
+.hero {
+  min-height: 100vh;
+  background: url(../asset/hero-img.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .content {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 13rem 2rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .content .title {
+  font-size: 6rem;
+  text-transform: capitalize;
+  color: #444;
+  text-align: center;
+  color: #fff;
+}
+
+.hero .content .title span {
+  color: #0eb582;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.hero .content p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.hero .content .count-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.hero .content .count-down .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 10rem;
+  width: 18rem;
+  background: #63e4c68f;
+  border: 0.1rem solid #0eb582;
+  border-radius: 3px;
+}
+
+.hero .content .count-down .box h3 {
+  font-size: 5rem;
+  text-transform: capitalize;
+  color: #444;
+  color: #fff;
+}
+
+.hero .content .count-down .box span {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  margin-top: 1.2rem;
+  color: #fff;
+}
+
+.hero .content .btn {
+  margin-top: 2rem;
+}
+
 @media (max-width: 1200px) {
   section {
     padding: 3rem 5%;
@@ -203,6 +315,9 @@ section {
     margin: 1rem auto;
     border-radius: 5rem;
   }
+  .hero .content {
+    padding: 10rem 2rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -211,6 +326,9 @@ section {
   }
   .heading {
     font-size: 3rem;
+  }
+  .hero .content {
+    padding: 3rem 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
