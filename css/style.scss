@@ -312,6 +312,28 @@ section {
 }
 //----- Footer area End -----
 
+//Under development pages
+.under-dev {
+	height: 100vh;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.image {
+		height: 50rem;
+		width: 50rem;
+
+		img {
+			width: 100%;
+		}
+	}
+	h1 {
+		@include titleText(5rem);
+	}
+}
+
 // Media queries
 @media (max-width: 1200px) {
 	section {
