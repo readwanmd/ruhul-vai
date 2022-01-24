@@ -8,7 +8,7 @@
   font-family: 'Nunito', sans-serif;
   outline: none;
   border: none;
-  text-decoration: none;
+  text-decoration: none !important;
   list-style: none;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -497,6 +497,232 @@ section {
   padding: 0.5rem 0;
 }
 
+.course-details .navClass .nav-tabs .nav-link {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  padding: 0 07rem;
+}
+
+.course-details .tab-content .fade:not(.show) {
+  /* opacity: 0; */
+  display: none !important;
+}
+
+.course-details .tab-content #discription {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(50rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 2rem;
+}
+
+.course-details .tab-content #discription img {
+  width: 100%;
+}
+
+.course-details .tab-content #discription .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.course-details .tab-content #discription .content .title {
+  font-size: 6rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+.course-details .tab-content #discription .content .title span {
+  color: #0eb582;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.course-details .tab-content #discription .content p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+}
+
+.course-details .tab-content #curriculum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-details .tab-content #curriculum table {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.course-details .tab-content #curriculum table thead {
+  background: #0eb582;
+  color: #fff;
+}
+
+.course-details .tab-content #instructor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-details .tab-content #instructor .expart-instructor {
+  padding-top: 2rem;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card {
+  width: 40rem;
+  text-align: center;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .image img {
+  background: #f0fdfa;
+  width: 100%;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .image .follow-me {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .image .follow-me a {
+  font-size: 3rem;
+  margin: 0 1rem;
+  color: #fff;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .image .follow-me a:hover {
+  color: #0eb582;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card:hover .image img {
+  background: #0eb582;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card:hover .image .follow-me {
+  bottom: 0;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+.course-details .tab-content #instructor .expart-instructor .card .content span {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.course-details .tab-content #price {
+  padding-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.course-details .tab-content #price .price-card {
+  width: 35rem;
+  background: #f0fdfa;
+  border: 1px solid #0eb582;
+  padding: 2rem;
+}
+
+.course-details .tab-content #price .price-card h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #444;
+  text-align: center;
+  border-bottom: 0.1rem solid #0eb582;
+  border-color: #0eb582;
+  padding-bottom: 2rem;
+}
+
+.course-details .tab-content #price .price-card h3 span {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #444;
+}
+
+.course-details .tab-content #price .price-card p {
+  font-size: 2rem;
+  line-height: 2;
+  color: #777;
+}
+
+.course-details .tab-content #price .price-card p i {
+  margin-right: 1rem;
+}
+
+.course-details .tab-content #price .price-card .btnn {
+  text-align: center;
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: 0.1rem solid #0eb582;
+  background: #0eb582;
+  color: #f0fdfa;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.course-details .tab-content #price .price-card .btnn:hover {
+  background: #f0fdfa;
+  color: #444;
+}
+
 .under-dev {
   height: 100vh;
   text-align: center;
@@ -534,6 +760,25 @@ section {
   section {
     padding: 3rem 5%;
   }
+  .course-details nav .nav-tabs .nav-link {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    padding: 0 5rem;
+  }
+  .tab-content #curriculum table {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    width: 60% !important;
+  }
+  #discription .content {
+    margin: 2rem 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 991px) {
@@ -542,6 +787,18 @@ section {
   }
   section {
     padding: 5rem 2rem;
+  }
+  .course-details nav .nav-tabs .nav-link {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    padding: 0 5rem;
+  }
+  .tab-content #curriculum table {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    width: 80% !important;
   }
 }
 
@@ -590,6 +847,18 @@ section {
   .hero .content {
     padding: 10rem 2rem;
   }
+  .course-details nav .nav-tabs .nav-link {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    padding: 0 2rem;
+  }
+  .tab-content #curriculum table {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    width: 90% !important;
+  }
 }
 
 @media (max-width: 450px) {
@@ -601,6 +870,18 @@ section {
   }
   .hero .content {
     padding: 3rem 2rem;
+  }
+  .course-details nav .nav-tabs .nav-link {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    padding: 0 1rem;
+  }
+  .tab-content #curriculum table {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #444;
+    width: 95% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

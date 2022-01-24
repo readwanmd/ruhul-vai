@@ -40,32 +40,129 @@
   </header>
   <!-- Header End -->
 
-  <nav>
-    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
-        role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
-        role="tab" aria-controls="nav-profile" aria-selected="false">Profile</button>
-      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
-        role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
+  <section class="course-details">
+    <h1 class="heading">Course Details - learn c with ruhul amin</h1>
+    <nav class="navClass">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="discription-tab" data-bs-toggle="tab" data-bs-target="#discription"
+          type="button" role="tab" aria-controls="discription" aria-selected="true">discription</button>
+        <button class="nav-link" id="curriculum-tab" data-bs-toggle="tab" data-bs-target="#curriculum" type="button"
+          role="tab" aria-controls="curriculum" aria-selected="false">curriculum</button>
+        <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#instructor" type="button"
+          role="tab" aria-controls="instructor" aria-selected="false">instructor</button>
+        <button class="nav-link" id="price-tab" data-bs-toggle="tab" data-bs-target="#price" type="button" role="tab"
+          aria-controls="price" aria-selected="false">price</button>
+      </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="discription" role="tabpanel" aria-labelledby="discription-tab">
+        <div class='content'>
+          <h3 class="title">Learn C with <span>Ruhul Amin</span></h3>
+          <p>There is a moment in the life of any aspiring programmer that is the time to write first "Hello World!".
+            It's exciting to think about joining this course.
+          </p>
+        </div>
+        <img src="../asset/description-img.svg" alt="">
+      </div>
+
+      <div class="tab-pane fade" id="curriculum" role="tabpanel" aria-labelledby="curriculum-tab">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Content</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">01</th>
+              <td>Basic concept and terminology</td>
+            </tr>
+            <tr>
+              <th scope="row">02</th>
+              <td>Variable And Data type with problem solving</td>
+            </tr>
+            <tr>
+              <th scope="row">03</th>
+              <td>Operator (contest on 1+2+3)</td>
+            </tr>
+            <tr>
+              <th scope="row">04</th>
+              <td>Control flow and problem solving with contest</td>
+            </tr>
+            <tr>
+              <th scope="row">05</th>
+              <td>Array and problem solving with contest</td>
+            </tr>
+            <tr>
+              <th scope="row">06</th>
+              <td>Function and problem solving with contest</td>
+            </tr>
+            <tr>
+              <th scope="row">07</th>
+              <td>Character with problem solving</td>
+            </tr>
+            <tr>
+              <th scope="row">08</th>
+              <td>Pointer with problem solving</td>
+            </tr>
+            <tr>
+              <th scope="row">09</th>
+              <td>Structure with some basic data structure.</td>
+            </tr>
+            <tr>
+              <th scope="row">10</th>
+              <td>File input and Output</td>
+            </tr>
+            <tr>
+              <th scope="row">11</th>
+              <td>Final contest on all topics</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tab-pane fade" id="instructor" role="tabpanel" aria-labelledby="instructor-tab">
+        <div class="expart-instructor">
+          <h1 class="heading">our expart instructor</h1>
+
+          <div class="card">
+            <div class="image">
+              <img src="../asset/ruhulAmin.png" alt="">
+              <div class="follow-me">
+                <a href="https://www.linkedin.com/in/ruhulcse/" class="fab fa-linkedin" target="_blank"></a>
+                <a href="https://twitter.com/AvangerRuhul" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://ruhul-amin.medium.com/" class="fab fa-medium" target="_blank"></a>
+                <a href="https://www.facebook.com/profile.php?id=100009570079792" class="fab fa-facebook-f"
+                  target="_blank"></a>
+                <a href="https://www.instagram.com/avanger_ruhul/" class="fab fa-instagram" target="_blank"></a>
+              </div>
+            </div>
+            <div class="content">
+              <h3>Ruhul Amin</h3>
+              <span>Software Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="price" role="tabpanel" aria-labelledby="price-tab">
+        <div class="price-card">
+          <h3><span>price</span>৳2000</h3>
+
+          <div class="">
+            <p> <i class="fas fa-check"></i>live class</p>
+            <p> <i class="fas fa-check"></i>contest</p>
+            <p> <i class="fas fa-check"></i>Exclusive Support</p>
+          </div>
+
+          <a href="https://tinyurl.com/2zfcpb7n" class="btnn">Join Now</a>
+
+        </div>
+      </div>
     </div>
-  </nav>
-  <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non corporis tenetur rem modi fuga aperiam repudiandae
-      dolor facilis consequuntur natus possimus velit maiores iusto consequatur doloremque aspernatur assumenda
-      exercitationem, a deserunt quibusdam. Quod praesentium sit ipsa enim tempora distinctio animi.
-    </div>
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">Lorem ipsum dolor sit
-      amet consectetur adipisicing elit. Magni dolore repellat iste officia animi distinctio autem ab, voluptate
-      laboriosam vero placeat consequuntur iure aperiam laborum. Officiis commodi, ea quis quod sunt architecto nesciunt
-      sint magni, repudiandae exercitationem magnam, ipsum ipsam? Facilis laborum laboriosam dolorum eveniet quis ea
-      doloremque atque consequuntur!</div>
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">Lorem ipsum dolor sit
-      amet, consectetur adipisicing elit. Eaque dignissimos itaque facilis laboriosam at maxime debitis hic cum quaerat
-      dolores nemo minus, repellendus sunt, esse, voluptatibus illum quia porro quibusdam eveniet pariatur aliquid
-      consequuntur numquam dolor accusamus! Consequuntur eius fugit impedit esse nemo, incidunt dignissimos.</div>
-  </div>
+  </section>
 
   <!-- Footer section start -->
   <section class="footer">

@@ -8,7 +8,7 @@
 	font-family: 'Nunito', sans-serif;
 	outline: none;
 	border: none;
-	text-decoration: none;
+	text-decoration: none !important;
 	list-style: none;
 	transition: all 0.2s linear;
 }
@@ -444,6 +444,188 @@ section {
 }
 //student options section end -----
 
+//Course details section start -----
+.course-details {
+	.navClass {
+		.nav-tabs .nav-link {
+			@include titleText(2rem);
+			padding: 0 07rem;
+		}
+	}
+
+	.tab-content {
+		.fade:not(.show) {
+			/* opacity: 0; */
+			display: none !important;
+		}
+		#discription {
+			@include grid(50rem);
+
+			img {
+				width: 100%;
+			}
+
+			.content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				.title {
+					@include titleText(6rem);
+
+					span {
+						color: $green;
+						font-family: 'Shadows Into Light', cursive;
+					}
+				}
+
+				p {
+					@include graphText(2rem);
+				}
+			}
+		}
+
+		#curriculum {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			table {
+				@include titleText(2rem);
+				width: 50%;
+				margin-top: 2rem;
+
+				thead {
+					background: $green;
+					color: $white;
+				}
+			}
+		}
+
+		#instructor {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.expart-instructor {
+				padding-top: 2rem;
+				.card {
+					width: 40rem;
+					text-align: center;
+
+					.image {
+						position: relative;
+						overflow: hidden;
+
+						img {
+							background: $light-green;
+							width: 100%;
+						}
+
+						.follow-me {
+							position: absolute;
+							bottom: -100%;
+							left: 0;
+							right: 0;
+							padding: 2rem;
+							background-color: rgba(0, 0, 0, 0.8);
+
+							a {
+								font-size: 3rem;
+								margin: 0 1rem;
+								color: $white;
+
+								&:hover {
+									color: $green;
+								}
+							}
+						}
+					}
+
+					&:hover {
+						.image {
+							img {
+								background: $green;
+							}
+
+							.follow-me {
+								bottom: 0;
+							}
+						}
+					}
+
+					.content {
+						display: flex;
+						padding-top: 1rem;
+						align-items: center;
+						justify-content: space-between;
+
+						h3 {
+							@include titleText(2rem);
+						}
+
+						span {
+							@include graphText(1.5rem);
+						}
+					}
+				}
+			}
+		}
+
+		#price {
+			padding-top: 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.price-card {
+				width: 35rem;
+				background: #f0fdfa;
+				border: 1px solid $green;
+				padding: 2rem;
+
+				h3 {
+					@include titleText(2.5rem);
+					text-align: center;
+					border-bottom: $border;
+					border-color: $green;
+					padding-bottom: 2rem;
+
+					span {
+						@include titleText(1.5rem);
+					}
+				}
+
+				p {
+					@include graphText(2rem);
+					i {
+						margin-right: 1rem;
+					}
+				}
+
+				.btnn {
+					text-align: center;
+					display: block;
+					margin-top: 1rem;
+					padding: 1rem 3rem;
+					font-size: 1.8rem;
+					border: $border;
+					background: $green;
+					color: $light-green;
+					text-transform: capitalize;
+					cursor: pointer;
+
+					&:hover {
+						background: $light-green;
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}
+//Course details section end -----
+
 //Under development pages
 .under-dev {
 	height: 100vh;
@@ -471,6 +653,32 @@ section {
 	section {
 		padding: 3rem 5%;
 	}
+
+	.course-details {
+		nav {
+			.nav-tabs .nav-link {
+				@include titleText(2rem);
+				padding: 0 5rem;
+			}
+		}
+	}
+
+	.tab-content {
+		#curriculum {
+			table {
+				@include titleText(2rem);
+				width: 60% !important;
+			}
+		}
+	}
+
+	#discription {
+		.content {
+			margin: 2rem 0;
+			align-items: center;
+			text-align: center;
+		}
+	}
 }
 
 @media (max-width: 991px) {
@@ -480,6 +688,24 @@ section {
 
 	section {
 		padding: 5rem 2rem;
+	}
+
+	.course-details {
+		nav {
+			.nav-tabs .nav-link {
+				@include titleText(2rem);
+				padding: 0 5rem;
+			}
+		}
+	}
+
+	.tab-content {
+		#curriculum {
+			table {
+				@include titleText(2rem);
+				width: 80% !important;
+			}
+		}
 	}
 }
 
@@ -531,6 +757,24 @@ section {
 			padding: 10rem 2rem;
 		}
 	}
+
+	.course-details {
+		nav {
+			.nav-tabs .nav-link {
+				@include titleText(2rem);
+				padding: 0 2rem;
+			}
+		}
+	}
+
+	.tab-content {
+		#curriculum {
+			table {
+				@include titleText(2rem);
+				width: 90% !important;
+			}
+		}
+	}
 }
 
 @media (max-width: 450px) {
@@ -545,6 +789,24 @@ section {
 	.hero {
 		.content {
 			padding: 3rem 2rem;
+		}
+	}
+
+	.course-details {
+		nav {
+			.nav-tabs .nav-link {
+				@include titleText(2rem);
+				padding: 0 1rem;
+			}
+		}
+	}
+
+	.tab-content {
+		#curriculum {
+			table {
+				@include titleText(2rem);
+				width: 95% !important;
+			}
 		}
 	}
 }
