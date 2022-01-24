@@ -12,7 +12,7 @@ closeNavbar.onclick = () => {
 	navbar.classList.remove('active');
 };
 
-let countDate = new Date('jan 31, 2022 00:00:00').getTime();
+let countDate = new Date('feb 15, 2022 00:00:00').getTime();
 
 function countDown() {
 	let now = new Date().getTime();
@@ -37,9 +37,9 @@ function countDown() {
 	console.log(48);
 }
 
-// setInterval(function () {
-// 	countDown();
-// }, 1000);
+setInterval(function () {
+	countDown();
+}, 1000);
 
 //copyright year
 let date = new Date();
