@@ -2,6 +2,7 @@
 let navbar = document.querySelector('.header .navbar');
 let closeNavbar = document.querySelector('#close-navbar');
 let menuBtn = document.querySelector('#menu-btn');
+let copyrightYear = document.querySelector('.footer .copyright span');
 
 menuBtn.onclick = () => {
 	navbar.classList.toggle('active');
@@ -32,8 +33,16 @@ function countDown() {
 	document.getElementById('hour').innerText = h;
 	document.getElementById('minute').innerText = m;
 	document.getElementById('second').innerText = s;
+
+	console.log(48);
 }
 
-setInterval(function () {
-	countDown();
-}, 1000);
+// setInterval(function () {
+// 	countDown();
+// }, 1000);
+
+//copyright year
+let date = new Date();
+let year = date.getFullYear();
+
+copyrightYear.innerText = year;

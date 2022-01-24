@@ -218,7 +218,8 @@ section {
 				align-items: center;
 				height: 10rem;
 				width: 18rem;
-				background: #63e4c68f;
+				// background: #63e4c68f;
+				background: #0eb58377;
 				border: $border;
 				border-radius: 3px;
 
@@ -243,6 +244,73 @@ section {
 }
 
 //-----  Hero section End -----
+
+//----- Footer area start -----
+.footer {
+	background: $light-green;
+
+	.box-container {
+		@include grid(25rem);
+
+		.box {
+			&:first-child img {
+				height: 4.5rem;
+				width: auto;
+			}
+
+			h3 {
+				@include titleText(2.5rem);
+				padding: 1rem 0;
+			}
+
+			p {
+				@include graphText(1.8rem);
+
+				a {
+					color: $green;
+				}
+			}
+
+			.follow-me {
+				margin-top: 1rem;
+
+				a {
+					height: 4.5rem;
+					width: 4.5rem;
+					line-height: 4.5rem;
+					font-size: 1.7rem;
+					background: $green;
+					color: $white;
+					margin-right: 0.5rem;
+					margin-bottom: 0.5rem;
+					text-align: center;
+
+					&:hover {
+						background: $black;
+					}
+				}
+			}
+			.link {
+				display: block;
+				@include titleText(1.7rem);
+				padding: 0.5rem 0;
+
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+
+	.copyright {
+		@include graphText(2rem);
+		text-align: center;
+		border-top: $border;
+		margin-top: 1rem;
+		padding-top: 1rem;
+	}
+}
+//----- Footer area End -----
 
 // Media queries
 @media (max-width: 1200px) {
