@@ -46,3 +46,28 @@ let date = new Date();
 let year = date.getFullYear();
 
 copyrightYear.innerText = year;
+
+var swiper = new Swiper('.openion-slider', {
+	loop: true,
+	grabCursor: true,
+	spaceBetween: 20,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		991: {
+			slidesPerView: 3,
+		},
+	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: true,
+	},
+});

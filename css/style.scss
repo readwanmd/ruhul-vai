@@ -312,6 +312,138 @@ section {
 }
 //----- Footer area End -----
 
+//home-course start
+.home-course-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	.course {
+		text-align: center;
+		position: relative;
+		width: 50rem;
+		height: 50rem;
+		background: $light-green;
+		border: $border;
+		overflow: hidden;
+
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+			.content {
+				background: rgba(10, 10, 10, 0.7);
+			}
+		}
+
+		.image {
+			padding: 2rem;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.content {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			background: hsla(0, 0%, 4%, 0.6);
+			color: $light-green;
+			padding: 2rem;
+			backdrop-filter: blur(5px);
+
+			.schedule {
+				display: flex;
+				justify-content: space-around;
+				gap: 2rem;
+				padding: 0.8rem 0;
+				.date {
+					@include titleText(3rem);
+					color: $light-green;
+
+					span {
+						@include titleText(1.5rem);
+						color: $light-green;
+					}
+
+					// border-right: $border;
+					// padding-right: 2rem;
+				}
+
+				.time-location {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					span {
+						@include titleText(1.5rem);
+						color: $light-green;
+
+						i {
+							margin-right: 1rem;
+						}
+					}
+				}
+			}
+
+			h3 {
+				@include titleText(3rem);
+				color: $light-green;
+			}
+
+			p {
+				@include titleText(1.5rem);
+				color: $light-green;
+
+				i {
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+}
+//home-course end
+
+//student options section start -----
+.students-openion {
+	.slide {
+		text-align: center;
+		p {
+			@include graphText(1.5rem);
+			position: relative;
+			background: $light-green;
+			border: $border;
+			margin-bottom: 3rem;
+			padding: 2rem;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -1.2rem;
+				left: 50%;
+				transform: translateX(-50%) rotate(45deg);
+				background: $light-green;
+				border-right: $border;
+				border-bottom: $border;
+				height: 2rem;
+				width: 2rem;
+			}
+		}
+		img {
+			height: 7rem;
+			width: 7rem;
+			border-radius: 50%;
+		}
+
+		h3 {
+			@include titleText(2.5rem);
+			padding: 0.5rem 0;
+		}
+	}
+}
+//student options section end -----
+
 //Under development pages
 .under-dev {
 	height: 100vh;
